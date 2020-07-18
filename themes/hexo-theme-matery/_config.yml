@@ -18,15 +18,15 @@ menu:
     url: /archives
     icon: fas fa-archive
   媒体:
-    url: /galleries
+    url: /music
     icon: fa fa-images
     children:
-      - name: 图集
-        url: /galleries
-        icon: fa fa-images
       - name: 音乐
         url: /music
         icon: fa fa-music
+      - name: 相册
+        url: /galleries
+        icon: fa fa-images
   About:
     url: /about
     icon: fas fa-user-circle
