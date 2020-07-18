@@ -461,19 +461,22 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
-- /medias/banner/0.jpg
-- /medias/banner/1.jpg
-- /medias/banner/2.jpg
-- /medias/banner/3.jpg
-- /medias/banner/4.jpg
-- /medias/banner/5.jpg
-- /medias/banner/6.jpg
-- /medias/banner/7.jpg
-- /medias/banner/8.jpg
-- /medias/banner/9.jpg
-- /medias/banner/10.jpg
-- /medias/banner/11.jpg
-- /medias/banner/12.jpg
+- /medias/featureImages/0.jpg
+- /medias/featureImages/1.jpg
+- /medias/featureImages/2.jpg
+- /medias/featureImages/3.jpg
+- /medias/featureImages/4.jpg
+- /medias/featureImages/5.jpg
+- /medias/featureImages/6.jpg
+- /medias/featureImages/7.jpg
+- /medias/featureImages/8.jpg
+- /medias/featureImages/9.jpg
+- /medias/featureImages/10.jpg
+- /medias/featureImages/11.jpg
+- /medias/featureImages/12.jpg
+- /medias/featureImages/13.jpg
+- /medias/featureImages/14.jpg
+- /medias/featureImages/15.jpg
 
 # default configs that the default policy for every articles/posts
 # default 配置文章的默认转载规则
