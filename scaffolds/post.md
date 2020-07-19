@@ -1,5 +1,13 @@
 ---
 title: {{ title }}
 date: {{ date }}
-tags:
+author: lihy
+top: true
+cover: true
+coverImg: 
+img: 
+mathjax: false
+tags: 
+categories: 
+summary: 
 ---
