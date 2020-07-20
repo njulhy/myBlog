@@ -1,10 +1,12 @@
 ---
 title: excel_简单公式
-tags: excel, office
 date: 2020-07-15 05:58:10
 categories: 学习
 mathjax: true
 summary: excel-PMT公式
+tags: 
+    - excel
+    - office
 ---
 
 <!-- TOC -->

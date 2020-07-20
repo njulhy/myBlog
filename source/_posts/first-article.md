@@ -1,7 +1,7 @@
 ---
 title: first article
 date: 2020-07-15 03:19:29
-tags: markdown
+tags: first
 categories: 学习
 summary: 博客开头
 ---

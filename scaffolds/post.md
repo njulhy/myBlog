@@ -7,7 +7,9 @@ cover: true
 coverImg: 
 img: 
 mathjax: false
-tags: 
 categories: 
 summary: 
+tags: 
+    - first
+    - second
 ---

@@ -1,9 +1,11 @@
 ---
 title: git命令小结
 date: 2020-07-15 13:36:28
-tags: vim, git, learning
 categories: 学习
 summary: git命令小结
+tags: 
+  - vim
+  - git
 ---
 
 <!-- TOC -->

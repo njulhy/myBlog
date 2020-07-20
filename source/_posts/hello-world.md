@@ -1,6 +1,6 @@
 ---
 title: Hello World
-tags: first article
+tags: first
 categories: 学习
 date: 2020-07-1 05:58:10
 summary: hexo介绍
