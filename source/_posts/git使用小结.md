@@ -3,6 +3,7 @@ title: git命令小结
 date: 2020-07-15 13:36:28
 categories: 学习
 summary: git命令小结
+author: lihy
 tags: 
   - vim
   - git

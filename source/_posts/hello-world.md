@@ -3,6 +3,7 @@ title: Hello World
 tags: first
 categories: 学习
 date: 2020-07-1 05:58:10
+author: lihy
 summary: hexo介绍
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).

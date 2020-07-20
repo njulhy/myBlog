@@ -2,10 +2,10 @@
 title: {{ title }}
 date: {{ date }}
 author: lihy
+img: 
 top: true
 cover: true
 coverImg: 
-img: 
 mathjax: false
 categories: 
 summary: 

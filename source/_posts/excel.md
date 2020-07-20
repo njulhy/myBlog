@@ -3,6 +3,7 @@ title: excel_简单公式
 date: 2020-07-15 05:58:10
 categories: 学习
 mathjax: true
+author: lihy
 summary: excel-PMT公式
 tags: 
     - excel
