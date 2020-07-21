@@ -1,17 +1,17 @@
 ---
-title: 看论文Multi-Active Learning Alorithm survey
+title: 看论文MLAL survey
 author: lihy
 top: true
 cover: true
 mathjax: true
 tags:
   - 看论文
-  - matery主题矩阵不换行
 date: 2020-07-21 17:29:48
 img:
 coverImg:
 categories:
-summary: 总结一下Multi-Active Learning Alorithms for ImageClassification-Overview and Future Promise综述的内容
+summary: 总结一下MLAL综述论文的内容
+keywords: 多标签主动学习综述
 ---
 
 ## 展开方式

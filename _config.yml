@@ -132,4 +132,4 @@ lazyload:
   isSPA: false # optional
 # Security
 encrypt:
-  enable: true
+  enable: false
