@@ -3,7 +3,7 @@ title: 安装浏览器脚本免费看vip视频
 author: lihy
 top: true
 img:
-cover: true
+cover: false
 mathjax: false
 tags:
   - vip视频
