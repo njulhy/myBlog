@@ -1,7 +1,7 @@
 ---
 title: 看论文MLAL survey
 author: lihy
-top: true
+top: false
 cover: true
 mathjax: true
 tags:
