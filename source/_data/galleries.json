@@ -1,10 +1,9 @@
 [
   {
     "name": "2020",
-    "date": "2020-7-1",
     "cover": "https://s1.ax1x.com/2020/07/16/UraBE8.md.jpg",
     "description": "2020年记录",
-    "title": "2020记录",
+    "button": "查看相册",
     "photos": [
       "/2020/07/17/UrOeG8.jpg",
       "/2020/07/17/UrLHKJ.jpg",
@@ -20,9 +19,9 @@
   },
   {
     "name": "202007",
-    "date": "2020-7-1",
     "cover": "https://s1.ax1x.com/2020/07/16/UraDUS.jpg",
     "description": "2020年记录",
+    "button": "查看相册",
     "photos": [
       "/2020/07/17/UrOeG8.jpg",
       "/2020/07/17/UrLHKJ.jpg",
