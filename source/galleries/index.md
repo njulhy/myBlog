@@ -3,4 +3,4 @@ title: 相册
 layout: "galleries"
 ---
 
-先借妹妹的图用一下
+先借别人的图用一下
