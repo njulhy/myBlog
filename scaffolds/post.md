@@ -26,7 +26,7 @@ mathjax: false
 
 ---
 
-<h2> 题外学到的东西</h2>
+<h2>题外学到的东西</h2>
 <div class="container">
   <h3>小标题</h3>
   <div class="card">
