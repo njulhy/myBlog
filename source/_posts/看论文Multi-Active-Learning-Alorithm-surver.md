@@ -2,10 +2,11 @@
 title: 看论文MLAL survey
 author: lihy
 top: false
-cover: true
+cover: false
 mathjax: true
 tags:
   - 看论文
+  - 2020夏
 date: 2020-07-21 17:29:48
 img:
 coverImg:
