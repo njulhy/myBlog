@@ -4,9 +4,9 @@ menu:
   Index:
     url: /
     icon: fas fa-home
-  Categories:
-    url: /categories
-    icon: fas fa-bookmark
+  文章:
+    url: /tags
+    icon: fa fa-th-list
     children:
     - name: 标签
       url: /tags
@@ -14,12 +14,12 @@ menu:
     - name: 类别
       url: /categories
       icon: fas fa-bookmark
-  Archives:
-    url: /archives
-    icon: fas fa-archive
+    - name: 归档
+      url: /archives
+      icon: fas fa-archive
   媒体:
     url: /music
-    icon: fa fa-images
+    icon: fa fa-play-circle
     children:
       - name: 音乐
         url: /music
@@ -42,7 +42,7 @@ menu:
     icon: fas fa-comments
   Friends:
     url: /friends
-    icon: fas fa-address-book
+    icon: fa fa-link
   # 二级菜单写法如下
   #Medias:
   #  icon: fas fa-list
