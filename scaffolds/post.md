@@ -9,7 +9,7 @@ tags:
   - second
 img:
 top: false
-cover: flase
+cover: false
 coverImg:
 mathjax: false
 ---
