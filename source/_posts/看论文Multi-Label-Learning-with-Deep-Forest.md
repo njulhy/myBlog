@@ -14,37 +14,91 @@ img:
 coverImg:
 ---
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+## 直接画图
 
-## title1
+&emsp;&emsp;多标签学习的 crucial task: how to leverage label correlations in building models. Deep neural netowrk methods usually jointly embed the feature and label information into a latent space to exploit label correlations.  
+&emsp;&emsp;深度森林不依赖反向传播，参数少（如深度等各种超参数）
+<img src="https://s1.ax1x.com/2020/07/25/Ux3MPx.jpg">
+&emsp;&emsp;上图对于本文算法的灵感来源、优势、mechanisms、contributions、generating notes、forest block 等做了总结
 
-&emsp;&emsp;paragraph1
-&emsp;&emsp;paragraph2
+## 名词解释
 
-## title2
+1. $F: X->[0, 1]^l$方程
+2. $H: X->{0, 1}^l$带阈值的 F（后文 H 似乎引用了 F）
+3. $\mathbf{X}$: sample matrix$\left[\begin{smallmatrix}x_1\\
+   x_2\\
+   \vdots\\
+   x_n\end{smallmatrix}\right]$
+4. $\mathbf{Y}$: 真实的 Label matrix$\left[\begin{smallmatrix}y_1\\
+   y_2\\
+   \vdots\\
+   y_n\end{smallmatrix}\right]$
+5. $\mathbf{Y}_i: \mathbf{Y}$的第 i 行
+6. $f_{ij}$: i-th instance 在 j-th 标签的 confidence score
+7. $h_{ij}$: i-th instance 的 j-th label 预测
+8. $rank_F(x_i, j):x_i$在 j-th label 的排序
+9. $Y_i^+, Y_i^-$: relevant/irrelevant note
+   e.g., if $f(x_i)=[0.2, 0.8, 0.4]$, <br>then $h(x_i)=[0, 1, 0]$ with $threshold=0.5, Y_i^+={1, 3}, Y_i^-={2}, rank_F(x_i, 2)=1$
+10. $\mathbf{H}^t$: representation of layer t, $\left[\begin{smallmatrix}h (x_1)\\
+   h(x_2)\\
+   \vdots\\
+   h(x_n)\end{smallmatrix}\right]$
+11. \$\mathbf{G}^t: \mathbf{H}^t\$结合\$\mathbf{G}^{t-1}\$形成的 representation，达到 feature resue, \$\left[\begin{smallmatrix}g(x_1)\\
+    g(x_2)\\
+    \vdots\\
+    g(x_n)\end{smallmatrix}\right]\$
+12. $\mathbf{P}:\mathbf{H}^t$的平均
+13. $p_{ij}:Pr[\hat{y}_{ij}=1]$
+14. $\alpha_i, \alpha_j$：表 confidence
+    e.g., $p_{. j}=[0.9, 0.6, 0.4, 0.3],\alpha_j=\frac{1}{4}(0.9+0.6+0.6+0.7)=0.7$
+15. M: measure
+16. $\mathbf{m}_j^t$：度量 M 在 layer t 的值，j 表示 label-based 是一个列，i 则表示一行
+17. S:confidence set，对 layert，产生$\mathbf{H}^t$，取$\mathbf{H}_{. j}^t$计算$\alpha_j^t$, 根据$(\mathbf{H}_{. j}^t, \mathbf{H}_{. j})$计算$\mathbf{m}_j^t$, 若$\mathbf{m}_j^t$比$\mathbf{m}_j^{t-1}$差，$S=S\cup{\alpha_j^t}$，这记录了每一次度量下降？
+18. $\theta_t$: compute threshold on S
+19. $p[t]$: performance of layer t on measure M with $\mathbf{G}^t$
 
-&emsp;&emsp;paragraph1
-&emsp;&emsp;paragraph2
+## 文章图标分析
 
----
+<img src="https://s1.ax1x.com/2020/07/25/UxN9IJ.jpg">
+<center>算法一<center>
 
-<h2>题外学到的东西</h2>
-<div class="container">
-  <h3>小标题</h3>
-  <div class="card">
-    <table>
-      <tr>
-        <td>aaa
-      </tr>
-      <tr>
-        <td>bbb
-      </tr>
-    </table>
-  </div>
-</div>
+&emsp;&emsp;对每一层来根据行或者列（例相关或标签相关）的confidence来决定是否进行feature resue，这里的feature resue十分简单，如果表现不足直接用上一层该列/行来代替。想法：这可行么？
+<img src="https://s1.ax1x.com/2020/07/25/UxNFR1.jpg">
+<center>算法二<center>
+
+&emsp;&emsp;对每一层根据行或者列（例相关或标签相关）先计算其confidence，然后计算对于某个度量M的表现，如果该度量在该列/行performance下降，那么将confidence并入集合S。如果是标签相关，对每一个performance下降的标签都进行了记录
+&emsp;&emsp;
+<img src="https://s1.ax1x.com/2020/07/25/UxN8QP.jpg">
+<center>算法三<center>
+
+<img src="https://s1.ax1x.com/2020/07/25/UxtOx0.jpg">
+<center>图一<center>
+
+&emsp;&emsp;想法：关于森林的选取，后文给出了一些说明，但是为什么不选更多种类的森林呢？那样不是更有多样性么？
+<img src="https://s1.ax1x.com/2020/07/25/Uxt5qS.jpg">
+<center>表一<center>
+
+&emsp;&emsp;六种多标签评估方法，其中hamming loss和macro-AUC是label-based, 其余是instance-based
+<img src="https://s1.ax1x.com/2020/07/25/UxNSZF.jpg">
+<center>表二<center>
+
+&emsp;&emsp;不懂：这里说$p_{i.},p_{.j}$降序排列，没想明白
+<img src="https://s1.ax1x.com/2020/07/25/UxNUoQ.jpg">
+<center>表三<center>
+
+## 文章结果
+
+<img src="https://s1.ax1x.com/2020/07/25/UxNyLT.jpg">
+<center>表四<center>
+
+<img src="https://s1.ax1x.com/2020/07/25/UxNoy6.jpg">
+<center>表五<center>
+
+<img src="https://s1.ax1x.com/2020/07/25/UxN2o4.jpg">
+<center>图二<center>
+
+<img src="https://s1.ax1x.com/2020/07/25/UxNWFJ.jpg">
+<center>图三<center>
+
+<img src="https://s1.ax1x.com/2020/07/25/UxNIQx.jpg">
+<center>图四<center>
