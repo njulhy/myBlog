@@ -5,8 +5,9 @@ top: false
 cover: false
 mathjax: true
 tags:
-  - 看论文
+  - Multi-Label
   - 2020夏
+  - Active-Learning
 date: 2020-07-21 17:29:48
 img:
 coverImg:

@@ -1,13 +1,12 @@
 ---
 title: excel_简单公式
 date: 2020-07-15 05:58:10
-categories: 学习
+categories: 笔记
 mathjax: true
 author: lihy
 summary: excel-PMT公式
 tags: 
     - excel
-    - office
     - 2020夏
 keywords: excel, PMT公式
 ---
@@ -24,7 +23,7 @@ keywords: excel, PMT公式
 
 ## 例子
 
-=IF(A15="","",IF(A15=\$C\$9,F14+E15,-PMT(\$C\$8/4,\$C\$9,\$C\$7)))
+`=IF(A15="","",IF(A15=\$C\$9,F14+E15,-PMT(\$C\$8/4,\$C\$9,\$C\$7)))`
 
 对特定单元格计算返回值：
 
@@ -60,7 +59,7 @@ keywords: excel, PMT公式
 > 上一期的剩余本金减去该期的本金
 
 ```excel
-比如 F15 显示=IF(A15="","",F14-D15)
+比如 F15 显示`=IF(A15="","",F14-D15)`
 意味由上一期的本金 100000000 减去改期本金 1,656,023.45 得到，如果序号为空则不显示
 ```
 
@@ -77,7 +76,7 @@ keywords: excel, PMT公式
 
 ## Address 函数
 
-> 根据指定行号和列号获得工作表中的某个单元格的地址，如 ADDRESS(2,3) 返回 \$C\$2
+> 根据指定行号和列号获得工作表中的某个单元格的地址，如 `ADDRESS(2,3)` 返回 `\$C\$2`
 
 ## PMT 公式
 
@@ -85,7 +84,7 @@ keywords: excel, PMT公式
 
 <img src="https://www.masterhsiao.com.tw/ExcelFinance/PMT/Images/Formular.gif">
 
-> PMT(rate, nper, pv, [fv], [type])
+> `PMT(rate, nper, pv, [fv], [type])`
 > 比率 必要。 這是貸款的利率。
 > nper 必要。 這是貸款的總付款期數。
 > Pv 必要。 這是現值，即未來各期付款現值總額；也稱為本金。
