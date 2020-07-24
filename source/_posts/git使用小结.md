@@ -54,9 +54,7 @@ tags:
 #### Create a new repository
 
     git clone .git地址
-    cd yveshe-git
-    touch README.md
-    git add README.md
+    git add .
     git commit -m "add README"
     git push -u origin master
 
