@@ -2,13 +2,6 @@
 # yarn lockfile v1
 
 
-"@iktakahiro/markdown-it-katex@^3.0.3":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@iktakahiro/markdown-it-katex/-/markdown-it-katex-3.1.0.tgz#cd40c1037f038ab00cbfee2464604435848deae9"
-  integrity sha512-Im2hih9ZkUqnUP7FhK0DTkGEVHgKNQ3BNQlbiBreWjSFPxysdylP1Ns5hLvoO+IdI1drhiiip/54VP8Gs3fLvw==
-  dependencies:
-    katex "^0.10.0"
-
 "@iktakahiro/markdown-it-katex@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@iktakahiro/markdown-it-katex/-/markdown-it-katex-4.0.0.tgz#a3d585d911d078a78aa0ee8ef17922d3ebdcd1f8"
@@ -16,10 +9,37 @@
   dependencies:
     katex "0.11.1"
 
+"@neilsustc/markdown-it-katex@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@neilsustc/markdown-it-katex/-/markdown-it-katex-0.4.0.tgz#3573f2eb10c811b56859ff0ce0afa60977a91865"
+  integrity sha512-8mq2nrPFOQzMGIwWl9Ocs3b2i2sirwCqxK39SCIh/LDEG8TdBuBMfMrQLePGQH1vjrXFfDxl58qaqGHfVDgvEA==
+  dependencies:
+    katex "^0.10.2"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
+"@upupming/hexo-renderer-markdown-it-plus@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@upupming/hexo-renderer-markdown-it-plus/-/hexo-renderer-markdown-it-plus-2.0.2.tgz#092ddc0c9da4251e4769fe7e81bb96882a14351d"
+  integrity sha512-lFWaGKqtftgxXxXE1AbqU0FC79mq+v05qmOb8wdYNjv1NYic1tssC82zNnFF/xRT3bKyMYT8PZx6phvi6mzEwA==
+  dependencies:
+    "@neilsustc/markdown-it-katex" "^0.4.0"
+    clone "^2.1.1"
+    highlight.js "^9.15.6"
+    markdown-it "^8.4.2"
+    markdown-it-abbr "^1.0.4"
+    markdown-it-deflist "^2.0.3"
+    markdown-it-emoji "^1.4.0"
+    markdown-it-footnote "^3.0.1"
+    markdown-it-ins "^2.0.0"
+    markdown-it-mark "^2.0.0"
+    markdown-it-sub "^1.0.0"
+    markdown-it-sup "^1.0.0"
+    markdown-it-toc "^1.1.0"
+    uslug "^1.0.4"
 
 JSONStream@^1.0.7:
   version "1.3.5"
@@ -1530,26 +1550,6 @@ hexo-renderer-ejs@^1.0.0:
   dependencies:
     ejs "^2.6.1"
 
-hexo-renderer-markdown-it-plus@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/hexo-renderer-markdown-it-plus/-/hexo-renderer-markdown-it-plus-1.0.4.tgz#b0962e75bafa4940ade9c1d7a97dfe50dd034066"
-  integrity sha512-JUCTQEy0s96IenfliN/gHxej/9z8gBwb7YzsFpcStk8PNKYfjKK1vluOljlx5JpxOjrOE2Vhtr17Yzns+Xms8Q==
-  dependencies:
-    "@iktakahiro/markdown-it-katex" "^3.0.3"
-    clone "^2.1.1"
-    highlight.js "^9.12.0"
-    markdown-it "^8.3.1"
-    markdown-it-abbr "^1.0.4"
-    markdown-it-deflist "^2.0.3"
-    markdown-it-emoji "^1.4.0"
-    markdown-it-footnote "^3.0.1"
-    markdown-it-ins "^2.0.0"
-    markdown-it-mark "^2.0.0"
-    markdown-it-sub "^1.0.0"
-    markdown-it-sup "^1.0.0"
-    markdown-it-toc "^1.1.0"
-    uslug "^1.0.4"
-
 hexo-renderer-stylus@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hexo-renderer-stylus/-/hexo-renderer-stylus-1.1.0.tgz#7a0a107bcf4b74fdf88f28da2db47b8dc9e208e5"
@@ -1625,7 +1625,7 @@ hexo@^4.2.1:
     titlecase "^1.1.2"
     warehouse "^3.0.1"
 
-highlight.js@^9.12.0, highlight.js@^9.13.1:
+highlight.js@^9.13.1, highlight.js@^9.15.6:
   version "9.18.1"
   resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.18.1.tgz#ed21aa001fe6252bb10a3d76d47573c6539fe13c"
   integrity sha512-OrVKYz70LHsnCgmbXctv/bfuvntIKDz177h0Co37DQ5jamGZLVmoCVMtjMtNZY3X9DrCcKfklHPNeA0uPZhSJg==
@@ -2009,7 +2009,7 @@ katex@0.11.1:
   dependencies:
     commander "^2.19.0"
 
-katex@^0.10.0:
+katex@^0.10.2:
   version "0.10.2"
   resolved "https://registry.yarnpkg.com/katex/-/katex-0.10.2.tgz#39973edbb65eda5b6f9e7f41648781e557dd4932"
   integrity sha512-cQOmyIRoMloCoSIOZ1+gEwsksdJZ1EW4SWm3QzxSza/QsnZr6D4U1V9S4q+B/OLm2OQ8TCBecQ8MaIfnScI7cw==
@@ -2161,7 +2161,7 @@ markdown-it-toc@^1.1.0:
   resolved "https://registry.yarnpkg.com/markdown-it-toc/-/markdown-it-toc-1.1.0.tgz#6d189858e32b3deb4ff3ad2713fa927439c957e0"
   integrity sha1-bRiYWOMrPetP860nE/qSdDnJV+A=
 
-markdown-it@^8.3.1:
+markdown-it@^8.4.2:
   version "8.4.2"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-8.4.2.tgz#386f98998dc15a37722aa7722084f4020bdd9b54"
   integrity sha512-GcRz3AWTqSUphY3vsUqQSFMbgR38a4Lh3GWlHRh/7MRwz8mcu9n2IO7HOh+bXHrR9kOPDl5RNCaEsrneb+xhHQ==
