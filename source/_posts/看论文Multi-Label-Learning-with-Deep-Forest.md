@@ -25,35 +25,35 @@ coverImg:
 
 1. $F: X->[0, 1]^l$方程
 2. $H: X->{0, 1}^l$带阈值的 F（后文 H 似乎引用了 F）
-3. $\mathbf{X}$: sample matrix$\left[\begin{smallmatrix}x_1\\
+3. $\mathbf{X}$: sample matrix$\left[\begin{matrix}x_1\\
    x_2\\
    \vdots\\
-   x_n\end{smallmatrix}\right]$
-4. $\mathbf{Y}$: 真实的 Label matrix$\left[\begin{smallmatrix}y_1\\
+   x_n\end{matrix}\right]$
+4. $\mathbf{Y}$: 真实的 Label matrix$\left[\begin{matrix}y_1\\
    y_2\\
    \vdots\\
-   y_n\end{smallmatrix}\right]$
+   y_n\end{matrix}\right]$
 5. $\mathbf{Y}_i: \mathbf{Y}$的第 i 行
 6. $f_{ij}$: i-th instance 在 j-th 标签的 confidence score
 7. $h_{ij}$: i-th instance 的 j-th label 预测
 8. $rank_F(x_i, j):x_i$在 j-th label 的排序
 9. $Y_i^+, Y_i^-$: relevant/irrelevant note
-   e.g., if $f(x_i)=[0.2, 0.8, 0.4]$, <br>then $h(x_i)=[0, 1, 0]$ with $threshold=0.5, Y_i^+={1, 3}, Y_i^-={2}, rank_F(x_i, 2)=1$
-10. $\mathbf{H}^t$: representation of layer t, $\left[\begin{smallmatrix}h (x_1)\\
+   e.g., if $f(x_i)=[0.2, 0.8, 0.4]$, <br>then $h(x_i)=[0, 1, 0]$ with threshold=0.5, $Y_i^+={1, 3}, Y_i^-={2}, rank_F(x_i, 2)=1$
+10. $\mathbf{H}^t$: representation of layer t, $\left[\begin{matrix}h (x_1)\\
    h(x_2)\\
    \vdots\\
-   h(x_n)\end{smallmatrix}\right]$
-11. \$\mathbf{G}^t: \mathbf{H}^t\$结合\$\mathbf{G}^{t-1}\$形成的 representation，达到 feature resue, \$\left[\begin{smallmatrix}g(x_1)\\
+   h(x_n)\end{matrix}\right]$
+11. $\mathbf{G}^t: \mathbf{H}^t$结合$\mathbf{G}^{t-1}$形成的 representation，达到 feature resue, $\left[\begin{matrix}g(x_1)\\
     g(x_2)\\
     \vdots\\
-    g(x_n)\end{smallmatrix}\right]\$
+    g(x_n)\end{matrix}\right]$
 12. $\mathbf{P}:\mathbf{H}^t$的平均
-13. $p_{ij}:Pr[\hat{y}_{ij}=1]$
+13. $p_{ij}: Pr[\hat{y}_{ij}=1]$
 14. $\alpha_i, \alpha_j$：表 confidence
     e.g., $p_{. j}=[0.9, 0.6, 0.4, 0.3],\alpha_j=\frac{1}{4}(0.9+0.6+0.6+0.7)=0.7$
 15. M: measure
 16. $\mathbf{m}_j^t$：度量 M 在 layer t 的值，j 表示 label-based 是一个列，i 则表示一行
-17. S:confidence set，对 layert，产生$\mathbf{H}^t$，取$\mathbf{H}_{. j}^t$计算$\alpha_j^t$, 根据$(\mathbf{H}_{. j}^t, \mathbf{H}_{. j})$计算$\mathbf{m}_j^t$, 若$\mathbf{m}_j^t$比$\mathbf{m}_j^{t-1}$差，$S=S\cup{\alpha_j^t}$，这记录了每一次度量下降？
+17. S:confidence set，对 layer t，产生$\mathbf{H}^t$，取$\mathbf{H}_{. j}^t$计算$\alpha_j^t$, 根据$(\mathbf{H}_{. j}^t, \mathbf{H}_{. j})$计算$\mathbf{m}_j^t$, 若$\mathbf{m}_j^t$比$\mathbf{m}_j^{t-1}$差，$S=S\cup{\alpha_j^t}$，这记录了每一次度量下降？
 18. $\theta_t$: compute threshold on S
 19. $\mathbf{p}[t]$: performance of layer t on measure M with $\mathbf{G}^t$
 
