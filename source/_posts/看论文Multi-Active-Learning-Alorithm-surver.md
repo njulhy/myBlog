@@ -3,7 +3,7 @@ title: 看论文MLAL survey
 author: lihy
 top: false
 cover: false
-mathjax: true
+mathjax: false
 tags:
   - Multi-Label
   - 2020夏

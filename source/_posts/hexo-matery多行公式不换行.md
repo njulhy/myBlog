@@ -38,7 +38,7 @@ npm un hexo-renderer-marked --save
 npm i hexo-renderer-markdown-it-plus --save
 ```
 
-&emsp;&emsp;当然本人使用的是yarn包管理器，操作大同小异。在安装了新的renderer后还需要开启Katex，在开发者口中Katex不能正确显示数学公式：
+&emsp;&emsp;当然本人使用的是yarn包管理器，操作大同小异。在安装了新的renderer后还需要开启Katex，[Katex](https://katex.org/docs/autorender.html)号称其在web端渲染很快。但是在本renderer的开发者口中Katex不能正确显示数学公式：
 Katex plugin is enabled by default. However, this renderer alone does not work out of the box for mathematical formulas to display correctly on your website. Therefore, you do not need to do anything if you do not want to use Katex. Otherwise, if you want to use katex, you must add this css style to your website:
 `https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css`
 &emsp;&emsp;死马当活马医。首先要在博客根目录的_config.yml写入

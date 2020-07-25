@@ -6,7 +6,7 @@ tags:
   - Multi-Label
 top: false
 cover: false
-mathjax: true
+mathjax: false
 date: 2020-07-24 12:35:41
 categories: 看论文
 summary: 总结论文Multi-Label Learning with Deep Forest
@@ -24,7 +24,7 @@ coverImg:
 ## 名词解释
 
 1. $F: X->[0, 1]^l$方程
-2. $H: X->{0, 1}^l$带阈值的 F（后文 H 似乎引用了 F）
+2. $H: X->\{0, 1\}^l$带阈值的 F（后文 H 似乎引用了 F）
 3. $\mathbf{X}$: sample matrix$\left[\begin{matrix}x_1\\
    x_2\\
    \vdots\\
