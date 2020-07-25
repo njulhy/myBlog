@@ -10,14 +10,14 @@ cover: false
 mathjax: false
 date: 2020-07-24 14:11:48
 categories: 网站搭建
-summary: hexo-matery多行公式显示问题
+summary: hexo-matery多行公式（矩阵不换行）显示问题
 img:
 coverImg:
 ---
 
 ### 不使用 mathjax，使用 Katex
 
-&emsp;&emsp;这是因为渲染引擎和 mathjax 部分字符冲突，可以选择使用Katex。Katex是一个轻量级的快速的公式排版库。您不必太担心显示的问题，毕竟这是全世界人都在用的东西。  
+&emsp;&emsp;这是因为模板渲染引擎和 mathjax 部分字符冲突，可以选择使用Katex。Katex是一个轻量级的快速的公式排版库。您不必太担心显示的问题，毕竟这是全世界人都在用的东西。  
 &emsp;&emsp;您可以直接参考[这里](https://katex.org/docs/autorender.html)，或者借用我的经验。  
 &emsp;&emsp;直接在您使用的主题渲染会用到的页面（任意一个后缀为.ejs 且渲染时会加载的文件——实际上 hexo 是将您的各个界面借助 ejs 文件来生成 html）里面加入以下代码。举例来说，如果您使用了 matery 主题，您可以加在`matery\layout\layout.ejs`, `matery\layout_partial\head.ejs`等等都可以。这些 ejs 文件在每一个 markdown 转化的时候都用得到。
 
@@ -42,7 +42,7 @@ Simple API, no dependencies – yet super fast on all major browsers.
 
 **其实还是使用 Katex 渲染……绕一大圈还是回去而已**，只不过更换的渲染引擎照它的官方文档会更快（我们体验不到啥的）。
 
-&emsp;&emsp;这是因为渲染引擎和 mathjax 部分字符冲突。可以选择更换渲染引擎。hexo 自带的 renderer engine 是 hexo-renderer-marked, 后面有人修改了一下自带的 renderer engine 命名为[hexo-renderer-kramed](https://www.npmjs.com/package/@neilsustc/markdown-it-katex)，但是只是做出了[小小的改进：](https://github.com/hsfzxjy/hexo-renderer-kramed/blob/master/lib/renderer.js)，主要改进如下：
+&emsp;&emsp;渲染引擎和 mathjax 部分字符冲突。可以选择更换渲染引擎。hexo 自带的 renderer engine 是 hexo-renderer-marked, 后面有人修改了一下自带的 renderer engine 命名为[hexo-renderer-kramed](https://www.npmjs.com/package/@neilsustc/markdown-it-katex)，但是只是做出了[小小的改进：](https://github.com/hsfzxjy/hexo-renderer-kramed/blob/master/lib/renderer.js)，主要改进如下：
 
 ```javascript
 // Change inline math rule
