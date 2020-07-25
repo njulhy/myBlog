@@ -574,7 +574,7 @@ instantpage:
 
 # banner 是否每日切换.
 banner:
-  enable: true
+  enable: false
 
 #ICP备案信息尾部显示
 icp:
@@ -594,7 +594,7 @@ jsDelivr:
   url: # https://cdn.jsdelivr.net/gh/skyls03/skyls03.github.io
 
 mermaid: ## mermaid url https://github.com/knsv/mermaid
-  enable: true  # default true
+  enable: false  # default true
   version: "7.1.2" # default v7.1.2
   options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
     #startOnload: true  // default true

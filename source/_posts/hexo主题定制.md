@@ -52,7 +52,7 @@ coverImg:
 1. 安装该插件，在博客根目录下打开 cmd 或者 git bash 输入`yarn add hexo-filter-mermaid-diagrams`(npm 的命令为`npm install hexo-filter-mermaid-diagrams`)
 2. 在**主题配置**中写入
 
-   ```tip
+   ```_config.yml
    # mermaid chart
    mermaid: ## mermaid url https://github.com/knsv/mermaid
    enable: true  # default true
