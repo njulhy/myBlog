@@ -9,7 +9,7 @@ top: false
 cover: false
 mathjax: false
 date: 2020-07-24 14:11:48
-categories: 笔记
+categories: 网站搭建
 summary: hexo-matery矩阵不换行
 img:
 coverImg:
