@@ -3,8 +3,7 @@ title: markdown简介和矩阵写法
 author: lihy
 tags:
   - 2020夏
-  - markdown语法
-  - markdown矩阵
+  - markdown
 top: false
 cover: false
 mathjax: true
