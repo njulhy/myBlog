@@ -9,7 +9,7 @@ top: false
 cover: false
 mathjax: true
 date: 2020-07-24 14:19:26
-categories: 网站搭建
+categories: 个人网站
 summary: markdown简介和矩阵写法
 img:
 coverImg:

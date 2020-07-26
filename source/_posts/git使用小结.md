@@ -1,7 +1,7 @@
 ---
 title: git命令小结
 date: 2020-07-15 13:36:28
-categories: 网站搭建
+categories: 个人网站
 summary: git命令小结
 author: lihy
 tags: 

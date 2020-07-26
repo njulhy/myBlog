@@ -9,7 +9,7 @@ top: false
 cover: false
 mathjax: false
 date: 2020-07-24 14:11:48
-categories: 网站搭建
+categories: 个人网站
 summary: hexo-matery多行公式（矩阵不换行）显示问题
 img:
 coverImg:

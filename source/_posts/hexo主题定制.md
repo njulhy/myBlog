@@ -10,7 +10,7 @@ top: false
 cover: false
 mathjax: false
 date: 2020-07-24 12:51:05
-categories: 网站搭建
+categories: 个人网站
 summary: 域名、相册、特效定制等
 img:
 coverImg:
