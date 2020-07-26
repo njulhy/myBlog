@@ -69,10 +69,8 @@ coverImg:
          \end{smallmatrix}$的展示
    ```
 
-   这是一个行间小矩阵$\begin{smallmatrix}
-      l&l\\
-      j&z
-      \end{smallmatrix}$的展示
+   这是一个行间小矩阵$\begin{smallmatrix}l&l\\
+      j&z\end{smallmatrix}$的展示
 
 &emsp;&emsp;**当然您可以在矩阵前后加上括号**，见后文
 

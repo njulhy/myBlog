@@ -28,7 +28,7 @@ npm install 的-save 和-save-dev 这两个参数的使用
 > npm install -save moduleName # -save 的意思是将模块安装到项目目录下，并在 package 文件的 dependencies 节点写入依赖。
 > npm install -save-dev moduleName # -save-dev 的意思是将模块安装到项目目录下，并在 package 文件的 devDependencies 节点写入依赖。
 
-## ClI 命令比较
+## CLI 命令比较
 
 | npm (v5)                              | yarn                          |
 | ------------------------------------- | ----------------------------- |
