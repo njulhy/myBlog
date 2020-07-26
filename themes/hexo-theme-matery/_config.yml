@@ -92,6 +92,7 @@ dream:
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
+# 知乎专栏解读网易云api：https://zhuanlan.zhihu.com/p/30246788
 music:
   enable: true
   title:  #非吸底模式有效
