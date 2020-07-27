@@ -11,7 +11,6 @@ img:
 top: false
 cover: false
 coverImg:
-mathjax: false
 ---
 
 ## title1
@@ -23,5 +22,3 @@ mathjax: false
 
 &emsp;&emsp;paragraph1
 &emsp;&emsp;paragraph2
-
----
