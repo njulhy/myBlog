@@ -1,5 +1,5 @@
 ---
-title: 安装浏览器脚本解析vip视频
+title: 使用浏览器脚本看vip视频
 author: lihy
 top: true
 img:
