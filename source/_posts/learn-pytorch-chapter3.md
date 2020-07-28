@@ -21,21 +21,21 @@ coverImg:
 &emsp;&emsp;一些需要注意的点
 
 - 步骤有：
-   1. create dataset
-   2. reading dataset: data_iter(batch_size, features, labels)
-   3. initiate parameters
-   4. define model: linreg(X, w, b)
-   5. define loss function: squared_loss(y_hat, y)
-   6. define Optimization algorithm: sgd(params, lr, batch_size)
-   7. train model
-   8. gain predict parameters
+  1.  create dataset
+  2.  reading dataset: data_iter(batch_size, features, labels)
+  3.  initiate parameters
+  4.  define model: linreg(X, w, b)
+  5.  define loss function: squared_loss(y_hat, y)
+  6.  define Optimization algorithm: sgd(params, lr, batch_size)
+  7.  train model
+  8.  gain predict parameters
 - 语法上的一些点：
-   1. torch包的随记函数：`torch.randn(num_examples, num_inputs, dtype=torch.float32)`
-   2. torch和numpy的转换以及numpy的正态分布`labels += torch.tensor(np.random.normal(0, 0.01, size=labels.size()), dtype=torch.float32)`
-   3. 对需要更新的参数设置梯度`w.requires_grad_(requires_grad=True)`
-   4. torch的数据格式：torch.LongTensor为整数
-   5. yield生成迭代器
-   6. torch.mm函数实现矩阵乘法
+  1.  torch 包的随记函数：`torch.randn(num_examples, num_inputs, dtype=torch.float32)`
+  2.  torch 和 numpy 的转换以及 numpy 的正态分布`labels += torch.tensor(np.random.normal(0, 0.01, size=labels.size()), dtype=torch.float32)`
+  3.  对需要更新的参数设置梯度`w.requires_grad_(requires_grad=True)`
+  4.  torch 的数据格式：torch.LongTensor 为整数
+  5.  yield 生成迭代器
+  6.  torch.mm 函数实现矩阵乘法
 
 ```python
 import torch
@@ -91,20 +91,22 @@ print(true_w, w, true_b, b, sep='\n')
 
 ## class 3.3 线性回归简洁实现
 
-- 步骤有：
-   1. create dataset
-   2. reading dataset: data_iter(batch_size, features, labels)
-   3. define model: `net = nn.Sequential(nn.Linear(num_inputs, 1))`
-   4. initiate parameters: `init.normal_(net[0].weight, mean=0, std=0.01);init.constant_(net[0].bias, val=0)`
-   5. define loss function: loss = nn.MSELoss()
-   6. define Optimization algorithm: optimizer = optim.SGD(net.parameters(), lr=0.03)
-   7. train model
-   8. gain predict parameters
+步骤有：
+
+1.  create dataset
+2.  reading dataset: data_iter(batch_size, features, labels)
+3.  define model: `net = nn.Sequential(nn.Linear(num_inputs, 1))`
+4.  initiate parameters: `init.normal_(net[0].weight, mean=0, std=0.01);init.constant_(net[0].bias, val=0)`
+5.  define loss function: loss = nn.MSELoss()
+6.  define Optimization algorithm: optimizer = optim.SGD(net.parameters(), lr=0.03)
+7.  train model
+8.  gain predict parameters
+
 - 语法上的一些点：
-   1. `torch.utils.data`模块提供了有关数据处理的工具
-   2. `torch.nn`模块定义了大量神经网络的层
-   3. `torch.nn.init`模块定义了各种初始化方法
-   4. `torch.optim`模块提供了很多常用的优化算法。
+  1.  `torch.utils.data`模块提供了有关数据处理的工具
+  2.  `torch.nn`模块定义了大量神经网络的层
+  3.  `torch.nn.init`模块定义了各种初始化方法
+  4.  `torch.optim`模块提供了很多常用的优化算法。
 
 ```python
 # class 3.3线性回归简洁实现
@@ -113,8 +115,8 @@ import torch.nn as nn
 from torch.nn import init # 4. initiate parameters
 import torch.optim as optim # 6. define Optimization algorithm
 from IPython import display
-from matplotlib import pyplot as plt 
-import numpy as np 
+from matplotlib import pyplot as plt
+import numpy as np
 import random
 import torch.utils.data as Data # 2. reading data
 
@@ -145,7 +147,7 @@ dataset = Data.TensorDataset(features, labels)
 data_iter = Data.DataLoader(dataset, batch_size, shuffle=True)
 
 # 3. define model
-net0 = LinearNet(num_inputs) # print(net) 
+net0 = LinearNet(num_inputs) # print(net)
 # 用nn.Sequential来更加方便地搭建网络，Sequential是一个有序的容器，网络层将按照在传入Sequential的顺序依次被添加到计算图中
 net = nn.Sequential(nn.Linear(num_inputs, 1)) # net.add_module('linear', nn.Linear(1, 1))
 # net.parameters()返回一个生成器，包含全部网络参数
@@ -187,12 +189,29 @@ print(true_w, dense.weight)
 print(true_b, dense.bias)
 ```
 
-## class 3.4 softmax回归
+## class 3.4 softmax 回归
 
-&emsp;&emsp;前文的模型是回归的，当标签处于离散状态，可以定义$y_i$来表示第i个标签, $\hat{y}_i$表示预测出的概率。  
-&emsp;&emsp;对于单样本，softmax回归对样本i分类的矢量计算表达式为
+&emsp;&emsp;前文的模型是回归的，当标签处于离散状态，可以定义$y_i$来表示第 i 个标签, $\hat{y}_i$表示预测出的概率。
+
+### 表达式
+
+&emsp;&emsp;对于单样本，softmax 回归对样本 i 分类的矢量计算表达式为
 $$\mathbf{o}^{(i)} =\mathbf{x}^{(i)} \mathbf{W}+\mathbf{b},$$
+$\mathbf{x}\in R^{1\times d},\mathbf{W}\in R^{d\times q},\mathbf{b}\in R^{1\times q}$
+上式对样本 x 的特征做了线性变换，可以理解为变换到了各类别的某种概率度量
 $$\hat{\mathbf{y}}^{(i)} =softmax (\mathbf{o}^{(i)})$$
-&emsp;&emsp;对于批量样本分类，softmax回归对样本i分类的矢量计算表达式为
+可以理解为 softmax 做了 e 指数变化，将上面提到的概率度量转化为了概率
+&emsp;&emsp;对于批量样本分类，softmax 回归对样本 i 分类的矢量计算表达式为
 $$\mathbf{O}^{(i)} =\mathbf{X} \mathbf{W}+\mathbf{b},$$
+$\mathbf{X}\in R^{n\times d},\mathbf{W}\in R^{d\times q},\mathbf{b}\in R^{1\times q}$
+R 进行了广播机制
 $$\hat{\mathbf{Y}} =softmax (\mathbf{O})$$
+
+### 损失函数
+
+&emsp;&emsp;我们可以让$\hat{y}^{(i)}$直接逼近$y^{(i)}$，这里选择最简单的平方损失：$||y^{(i)}-\hat{y}^{(i)}||^2/2$，但是举个例子就可以发现这种损失函数太过严格。如三分类的两个预测(0.1, 0.8, 0.1), (0.3, 0.4, 0.3)都给出了对(0, 1, 0)的正确预测，但是两者的损失函数却差异太大，分别为 0.03 和 0.27
+&emsp;&emsp;改善上述问题的一个方法是使用更适合衡量两个概率分布差异的测量函数。其中，交叉熵（cross entropy）是一个常用的衡量方法：
+
+$$H\left(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}\right ) = -\sum_{j=1}^q y_j^{(i)} \log \hat y_j^{(i)},$$
+其中带下标的$y_j^{(i)}$是向量$\boldsymbol y^{(i)}$中非 0 即 1 的元素，需要注意将它与样本$i$类别的离散数值，即不带下标的$y^{(i)}$区分。在上式中，我们知道向量$\boldsymbol y^{(i)}$中只有第$y^{(i)}$个元素$y^{(i)}_{y^{(i)}}$为 1，其余全为 0，于是$H(\boldsymbol y^{(i)}, \boldsymbol {\hat y}^{(i)}) = -\log \hat y_{y^{(i)}}^{(i)}$。也就是说，交叉熵只关心对正确类别的预测概率，因为只要其值足够大，就可以确保分类结果正确。当然，遇到一个样本有多个标签时，例如图像里含有不止一个物体时，我们并不能做这一步简化。但即便对于这种情况，交叉熵同样只关心对图像中出现的物体类别的预测概率。
+

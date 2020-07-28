@@ -1,7 +1,7 @@
 ---
 title: 使用浏览器脚本看vip视频
 author: lihy
-top: true
+top: false
 img:
 cover: false
 mathjax: false
