@@ -21,6 +21,7 @@ coverImg:
 - [配置anaconda](#配置anaconda)
     - [了解原理看此节](#了解原理看此节)
     - [激活 conda](#激活-conda)
+- [参考](#参考)
 
 <!-- /TOC -->
 
@@ -127,5 +128,6 @@ source .bashrc
 1. 在你打开 bash 的目录下创建一个".bash_profile"文件（一般来说都是用户根目录，但你需要注意你打开命令行的位置，比如 vscode 的 ssh-remote 支持你打开文件夹登录，这时你需要在该目录下激活你的 conda 环境）
 2. 在你的".bash_profile"文件中写入`source your_path/.bashrc`，注意你进入bash的**路径**
 
-参考
+## 参考
+
 [Ubuntu16.04 服务器普通用户（非管理员账户）在自己目录下安装 TensorFlow， Keras 等（亲测）](https://blog.csdn.net/moses1994/article/details/81507802)

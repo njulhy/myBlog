@@ -13,7 +13,14 @@ summary: 解决Could not find conda environment
 img:
 coverImg:
 ---
+<!-- TOC -->
 
+- [问题说明](#问题说明)
+- [问题解决](#问题解决)
+- [后记](#后记)
+- [参考](#参考)
+
+<!-- /TOC -->
 ## 问题说明
 
 &emsp;&emsp;在使用`conda activate [environment name]`或者`source activate [environment name]`时，可能出现你明明安装了一个环境，但是 conda 却发现不了，然后提示`Could not find conda environment`。甚至可能`conda env list`或者`conda info --envs`后，居然发现环境是存在的。
