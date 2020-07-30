@@ -3,7 +3,8 @@ title: ubuntu服务器普通用户安装anaconda
 author: lihy
 tags:
   - 2020夏
-  - second
+  - anaconda
+  - ubuntu
 top: false
 cover: false
 date: 2020-07-30 10:30:13
