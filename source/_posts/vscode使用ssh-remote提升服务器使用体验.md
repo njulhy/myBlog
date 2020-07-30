@@ -28,11 +28,9 @@ coverImg:
 给个示例图，直接拖动就能完成文件操作。
 <img src="https://s1.ax1x.com/2020/07/30/aMVXff.jpg">
 
-&emsp;&emsp;需要用到 git 来使用 ssh 命令
-
 ## 服务器免密登录
 
-&emsp;&emsp;点击[这里](https://git-scm.com/download)下载一个版本安装。安装后打开 cmd 输入`git --version`来检查是否安装成功。想了解 git 的话查看[文档（使用指南）](https://git-scm.com/book/en/v2)。如果 cmd 中没有反应，可能是环境变量没有设置正确。设置一下环境变量，把你安装git后的目录添加到环境变量，如`c:/program files/git/usr/bin`<img src="https://s1.ax1x.com/2020/07/19/UWIVpV.jpg">。这样就可以愉快的在cmd或git bash中使用`ssh, bash, ssh-keygen`等linux命令了~
+&emsp;&emsp;需要用到 git 来使用 ssh 命令，点击[这里](https://git-scm.com/download)下载一个git版本安装。安装后打开 cmd 输入`git --version`来检查是否安装成功。想了解 git 的话查看[文档（使用指南）](https://git-scm.com/book/en/v2)。如果 cmd 中没有反应，可能是环境变量没有设置正确。设置一下环境变量，把你安装git后的目录添加到环境变量，如`c:/program files/git/usr/bin`<img src="https://s1.ax1x.com/2020/07/19/UWIVpV.jpg">。这样就可以愉快的在cmd或git bash中使用`ssh, bash, ssh-keygen`等linux命令了~
 
 ### 创建密钥
 
