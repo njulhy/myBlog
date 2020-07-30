@@ -42,7 +42,7 @@ coverImg:
 &emsp;&emsp;&emsp;&emsp;这里需要将刚刚生成的id_rsa.pub的内容加入到authorized_keys中如，直接命令行操作即可。你需要找到你生成的id_rsa.pub路径，然后使用scp命令传输文件
 
 ```cmd
-scp your_path/id_rsa.pub lhy@ipv4_address:/home/your_user_name/.ssh/authorized_keys
+scp your_path/id_rsa.pub user_name@ipv4_address:/home/your_user_name/.ssh/authorized_keys
 ```
 
 &emsp;&emsp;注意更改路径、服务器地址、你在服务器的用户名。然后输入密码完成密钥传输，退出cmd。重新打开cmd尝试私钥登录。输入`ssh user_name@ipv4_address`查看是否可以免密登录，如果没成功尝试`ssh user_name@ipv4_address -i your_path/id_rsa.pub`手动指定私钥文件来连接（这里你的电脑自动读取了本地用户的.ssh文件夹中的私钥和服务器达成了连接）。
