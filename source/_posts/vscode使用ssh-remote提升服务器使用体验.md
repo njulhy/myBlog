@@ -1,5 +1,5 @@
 ---
-title: vscode使用ssh-remote提升服务器使用体验
+title: winscp配合vscode提升服务器使用体验
 author: lihy
 tags:
   - 2020夏
