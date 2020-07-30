@@ -4,7 +4,7 @@ author: lihy
 tags:
   - 2020夏
   - conda
-  - python_environment
+  - python
 top: false
 cover: false
 date: 2020-07-30 16:25:59
