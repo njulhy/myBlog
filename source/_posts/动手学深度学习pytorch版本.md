@@ -7,7 +7,7 @@ tags:
 top: true
 cover: true
 date: 2020-07-28 19:47:34
-categories: 教科书
+categories: pytorch
 summary: 动手学深度学习pytorch版本
 img:
 coverImg:

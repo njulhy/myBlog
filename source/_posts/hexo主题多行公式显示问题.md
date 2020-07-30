@@ -15,9 +15,13 @@ img:
 coverImg:
 ---
 
-### 不使用 mathjax，使用 Katex
+### 问题描述：
 
-&emsp;&emsp;这是因为模板渲染引擎和 mathjax 部分字符冲突，可以选择使用Katex。Katex是一个轻量级的快速的公式排版库。您不必太担心显示的问题，毕竟这是全世界人都在用的东西。  
+hexo-matery 多行公式（矩阵不换行）显示问题。
+
+### 问题解决：不使用 mathjax，使用 Katex
+
+&emsp;&emsp;这个问题是因为模板渲染引擎和 mathjax 部分字符冲突，可以选择使用 Katex渲染公式。Katex 是一个轻量级的快速的公式排版库。您不必太担心显示的问题，毕竟这是全世界人都在用的东西。  
 &emsp;&emsp;您可以直接参考[这里](https://katex.org/docs/autorender.html)，或者借用我的经验。  
 &emsp;&emsp;直接在您使用的主题渲染会用到的页面（任意一个后缀为.ejs 且渲染时会加载的文件——实际上 hexo 是将您的各个界面借助 ejs 文件来生成 html）里面加入以下代码。举例来说，如果您使用了 matery 主题，您可以加在`matery\layout\layout.ejs`, `matery\layout_partial\head.ejs`等等都可以。这些 ejs 文件在每一个 markdown 转化的时候都用得到。
 
