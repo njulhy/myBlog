@@ -8,7 +8,7 @@ tags:
 top: false
 cover: false
 date: 2020-07-30 16:25:59
-categories: pytorch
+categories: python
 summary: 解决Could not find conda environment
 img:
 coverImg:

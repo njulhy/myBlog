@@ -9,7 +9,7 @@ tags:
 top: false
 cover: false
 date: 2020-07-28 14:07:38
-categories: 笔记
+categories: python
 summary: 笔记……
 img:
 coverImg:
