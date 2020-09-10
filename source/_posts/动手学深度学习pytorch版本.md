@@ -4,8 +4,8 @@ author: lihy
 tags:
   - 2020夏
   - docsify
-top: true
-cover: true
+top: flase
+cover: flase
 date: 2020-07-28 19:47:34
 categories: python
 summary: 动手学深度学习pytorch版本
