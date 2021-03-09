@@ -7,7 +7,7 @@ tags:
 top: false
 cover: false
 date: 2020-07-27 07:57:11
-categories: 看论文
+categories: 阅读
 summary: 一年前就应该看的gcForest论文
 img:
 coverImg:

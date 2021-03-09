@@ -8,7 +8,7 @@ top: false
 cover: false
 mathjax: false
 date: 2020-07-24 12:35:41
-categories: 看论文
+categories: 阅读
 summary: 总结论文Multi-Label Learning with Deep Forest
 img:
 coverImg:

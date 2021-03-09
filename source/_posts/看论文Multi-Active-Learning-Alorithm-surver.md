@@ -11,7 +11,7 @@ tags:
 date: 2020-07-21 17:29:48
 img:
 coverImg:
-categories: 看论文
+categories: 阅读
 summary: 总结一下MLAL综述论文的内容
 keywords: 多标签主动学习综述
 ---

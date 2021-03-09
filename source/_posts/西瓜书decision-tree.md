@@ -8,7 +8,7 @@ tags:
 top: false
 cover: false
 date: 2020-07-27 22:03:17
-categories: 算法
+categories: 阅读
 summary: 西瓜书第四章
 img:
 coverImg:
