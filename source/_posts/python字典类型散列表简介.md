@@ -14,8 +14,6 @@ img:
 coverImg:
 ---
 
-<!-- TOC -->autoauto- [泛映射类型](#泛映射类型)auto- [dict 背后的散列表](#dict-背后的散列表)auto- [字典如何查询键值对](#字典如何查询键值对)auto- [字典如何添加键值对](#字典如何添加键值对)autoauto<!-- /TOC -->
-
 ## 泛映射类型
 
 <center>

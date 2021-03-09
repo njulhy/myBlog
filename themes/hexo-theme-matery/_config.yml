@@ -149,13 +149,13 @@ indexbtn:
   enable: true
   name: Github
   icon: fab fa-github-alt
-  url: https://github.com/njulhy/Blog_template
+  url: https://github.com/njulhy
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github: https://github.com/njulhy/Blog_template
+  github: https://github.com/njulhy
   email: dustlihy@gmail.com
   twitter: 
   qq: 210580531
@@ -235,21 +235,21 @@ profile:
 myProjects:
   enable: true
   data:
-    hexo-theme-matery:
+    github:
       icon: fas fa-file-alt
       iconBackground: 'linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)'
-      url: https://github.com/njulhy/Blog_template
-      desc: This is the template of my blog.
-    Fenix:
+      url: https://github.com/njulhy
+      desc: 本人github地址.
+    jd_comment:
         icon: fas fa-database
         iconBackground: 'linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)'
-        url: https://github.com/blinkfox/fenix
-        desc: 大佬的 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
-    typora-vue-theme:
+        url: https://github.com/njulhy/funny_code/tree/main/%E4%BA%AC%E4%B8%9C%E6%89%8B%E6%9C%BA%E8%AF%84%E8%AE%BA%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90
+        desc: 京东手机评论分析。
+    spider:
         icon: fas fa-file-alt
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
-        desc: 大佬的 typora theme(inspired by Vue document style).
+        url: https://github.com/njulhy/funny_code/tree/main/spider
+        desc: 自己写的几个有用的爬虫
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
@@ -382,7 +382,7 @@ minivaline:
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
   enable: true
-  url: https://github.com/njulhy/Blog_template
+  url: https://github.com/njulhy
   title: Fork
 
 # The password verification feature of read post. To use this feature,

@@ -14,8 +14,6 @@ img:
 coverImg:
 ---
 
-<!-- TOC -->autoauto- [什么是Python的特殊方法？](#什么是python的特殊方法)auto- [几个常见特殊方法介绍](#几个常见特殊方法介绍)auto- [使用特殊方法的例子](#使用特殊方法的例子)auto    - [纸牌的例子](#纸牌的例子)auto- [复数例子](#复数例子)autoauto<!-- /TOC -->
-
 本文参考自《流畅的 Python》第一章
 
 ## 什么是 Python 的特殊方法？
