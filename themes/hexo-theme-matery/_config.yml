@@ -281,7 +281,7 @@ mySkills:
 myGallery:
   enable: false
   data:
-    - /medias/banner/0.jpg
+    - /medias/banner/banner.jpg
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
